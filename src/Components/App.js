@@ -18,13 +18,11 @@ const App = () => {
         localStorage.setItem('task', JSON.stringify(taskItems));
     }, [taskItems]);
 
-    const fullScreen = () => this.fullScreen()
 
     return (
         <>
             <ShowDate />
             <div className="flex justify-center items-center min-h-screen sm:min-h-[60vh]">
-                <button type="button" onClick={fullScreen}>Full Screen</button>
                 <div className="md:max-w-4xl w-full sm:w-[70%] mt-16 bg-slate-800 rounded-md py-10 px-5 mx-5 md:mx-auto md:bg-transparent">
                     <TaskContext.Provider value={{
                         taskItems,
